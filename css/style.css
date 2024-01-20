@@ -50,14 +50,14 @@ img{
     display:inline-block;
     vertical-align: top;
 }
-/* button{
+button{
     line-height: inherit;
     font-size: inherit;
     font-weight: inherit;
     cursor: pointer;
     color: inherit;
     background-color:transparent;
-} */
+}
 
 .header{
     z-index: 50;
@@ -85,6 +85,11 @@ transition: opacity 0.3s;
     justify-content: space-around;
    column-gap:23px;
 }
+@media(max-width:650px){
+  .header__body{
+    display: block;
+  }
+}
 
 .header-nav{
     display: flex;
@@ -93,6 +98,7 @@ transition: opacity 0.3s;
 
 .header-nav__list{
      display: flex;
+     flex-wrap: wrap;
      align-items: center;
   gap: 50px;
   font-size: 12px;
@@ -137,9 +143,19 @@ display: flex;
     padding-bottom: 50px;
 
 }
+@media(max-width:800px){
+    .main-sections__container{
+        display: block;
+        text-align: center;
+    }
+}
 .main-sections__content{
     flex: 0 0 54%;
 }
+@media(max-width:800px){
+    .main-sections__content{
+        margin-top: 100px;
+}}
 .main-section__label{
     color: #fff;
     font-family: Rubik;
@@ -169,6 +185,11 @@ font-weight: 500;
 line-height: normal;
 color: #fff;
 }
+@media(max-width:800px){
+    .main-sections__video-link{
+        margin-top: 40px;
+        justify-content: center;
+}}
 .main-sections__video-link::before{
     content: "";
     flex: 0 0 32px;
@@ -216,6 +237,11 @@ object-fit: cover;
     height: 140px;
     background-color:#222F33;
 }
+@media(max-width:800px){
+    .material::after{
+        background-color: #fff;
+    }
+}
 .material__container{
     display: grid;
     position: relative;
@@ -223,6 +249,12 @@ object-fit: cover;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     min-width: 0;
+}
+@media(max-width:800px){
+    .material__container{
+        display: block;
+        text-align: center;
+    }
 }
 .material__title{
     margin-top: 60px;
@@ -268,18 +300,18 @@ border:1px solid #606B74;
     max-width: 325px;
     justify-self: end;
 }
+@media(max-width:800px){
+    .material__slaider{
+        transform: none;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+}
 .slaider-materials__slide{
 aspect-ratio: 325/366;
 position: relative;
 }
-/* .slaider-materials__slide img{
-    position: absolute;
-    top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-object-fit: cover;
-    } */
+
     .swiper-materials__pagination{
 display: flex;
 align-items: center;
@@ -290,17 +322,6 @@ bottom: 0;
 left: 0;
 width: 100%;
     }
- /* .swiper-pagination-bullet{
-     background-color: #fff;  
-     opacity: 0.4; 
-        height: 8px;
-        flex: 0 0 8px;
-    }
-.swiper-pagination-bullet-active{
-        background-color: #fff;  
-        opacity:1; 
-           
-       } */
 .inovative{
     background-color: #222F33;
 }
@@ -309,6 +330,12 @@ width: 100%;
     justify-content:center ;
     gap: 40px;
     padding-bottom: 78px;
+}
+@media(max-width:500px){
+    .text-inovative{
+       display: block;
+        
+    }
 }
 .inovative__title{
     padding-top: 72px;
@@ -337,6 +364,12 @@ display: grid;
 grid-template-columns: repeat(2,1fr);
 column-gap: 60px;
 row-gap: 1.25rem;}
+@media(max-width:810px){
+    .information__container{
+        display: block;
+        
+    }
+}
 .information__image img{
 width: 100%;
 }
@@ -345,6 +378,11 @@ display: grid;
 grid-template-columns: repeat(2,1fr);
 column-gap: 60px;
 row-gap: 1.25rem;}
+@media(max-width:800px){
+    .information__content{
+        margin-top: 50px;    
+    }
+}
 .information__title{
     font-family: Merriweather;
 font-size: 18px;
@@ -374,6 +412,13 @@ background-color:  #222F33;
     color:#fff;
     grid-template-columns: repeat(3,1fr);
 }
+@media(max-width:500px){
+    .footer__container{
+       display: block;
+       text-align: center;
+        
+    }
+}
 .footer__email{
     font-family: Rubik;
 font-size: 12px;
@@ -384,16 +429,23 @@ line-height: normal;
 .footer__logo{
    justify-self: center;
 }
-.footer__list{
-    
-
-
+@media(max-width:500px){
+    .footer__logo{
+       margin-top: 20px;
+    }
 }
 .menu-footer{
     display: flex;
     align-items: center;
     justify-self: end;
     gap: 30px;
+}
+@media(max-width:500px){
+    .menu-footer{
+       display: block;
+       margin-top: 20px;
+        
+    }
 }
 .menu-footer__link:hover{
     text-decoration: underline;
